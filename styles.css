@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Suaviza el desplazamiento de las secciones */
+}
+
+.navbar {
+    background-color: #fB6F92;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s; /* Transición para el cambio de color */
+}
+
+.navbar:hover {
+    background-color: #FF8FAB; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #FFE5EC;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s; /* Transición para el color del enlace */
+}
+
+.navbar ul li a:hover {
+    color: #ddd; /* Cambia el color del enlace al pasar el mouse */
+}
+
+section {
+    padding: 100px 20px; /* Ajuste el padding superior para evitar que el contenido quede debajo del nav */
+    min-height: 50vh; /* Ocupa toda la altura de la ventana */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espacio entre la imagen y el texto */
+    max-width: 900px; /* Ancho máximo del contenido */
+    margin-top: 20px;
+}
+
+.content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content p {
+    margin: 0;
+    flex: 1;
+}
+
+/* Reverse the order of elements for sections with the class "reverse" */
+.reverse .content {
+    flex-direction: row-reverse;
+}
+
+#sobre-mi {
+    background-color: #FFE5EC;
+}
+
+#tema-favorito {
+    background-color: #FFC2D1;
+}
+
+#hobbies {
+    background-color: #FFB3C6;
+}
+
+#contacto {
+    background-color: #FF8FAB;
+}
+
+
+/*icon*/
+
+.container-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-icon a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 50%; /* Hace que el sombreado sea circular */
+    padding: 10px; /* Espacio interno para que el ícono no se superponga con el sombreado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombreado inicial */
+}
+
+.container-icon a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombreado al pasar el mouse */
+}
+
+/* Alineación horizontal de los íconos */
+.container-icon ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.container-icon li {
+    margin-right: 10px;
+}
+
+
+/*---------------*/
+
+/*galeria*/
+
+
+.photo-gallery {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #FFE5EC;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Different sizes for the grid items */
+.grid-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Angélica</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/bbc2c87130.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#sobre-mi">About me</a></li>
+            <li><a href="#tema-favorito">My favorite theme</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contacto">My future</a></li>
+        </ul>
+    </nav>
+    <section id="sobre-mi">
+        <h2> About me</h2>
+        <div class="content">
+            <img src="/imgenes/angesobremi.jpg" alt="imagen de perfil">
+            <p>Hello! I'm Angélica, I'm 20 years old, and I'm an aspiring software engineer. I love animals and enjoy feeling the energy of plants and animals because I am sensitive to them.</p>
+        </div>
+    </section>
+    <section id="tema-favorito" class="reverse">
+        <h2>My favorite theme</h2>
+        <div class="content">
+            <img src="/imgenes/temafav.jpg" alt="imagen de tema favorito">
+            <p> 
+                I enjoy doing many things, but especially meeting new people because I can learn a lot from them. I like participating in new activities that help me step out of my comfort zone.
+                
+                I appreciate engaging in meaningful conversations about topics important to me, such  how to keep improving and discussing the innovative things emerging in the market.</p>
+        </div>
+    </section>
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <div class="content">
+            <img src="/imgenes/hobbi.jpg" alt="imagen de hobbies">
+            <p>I love painting and drawing. I used to play an instrument; when I was 12, I played the violin, but I haven't practiced in a long time.
+
+                I love going to the beach and enjoying the warm wind, as well as taking long walks in green places like forests. I also enjoy writing poems and making healthy cakes.</p>
+        </div>
+    </section>
+    <section id="contacto" class="reverse">
+        <h2>My future</h2>
+        <div class="content">
+            <img src="/imgenes/futuro.jpg" alt="imagen de contacto">
+            <p>Foto First, beyond the material and professional achievements I am confident I will attain, I want to be an example and a source of pride for myself and for my future family.
+
+                I will specialize in data science to create my own data analysis consultancy and provide financial analysis support for companies in Peru and Colombia.
+                
+                On a personal level, I aspire to build a family founded on strong values and mutual respect.</p>
+        </div>
+        <div class="container-icon">
+            <ul>
+                <li><a href="https://www.facebook.com/share/iEfMre554BQknerL/?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/angelica.ctov?igsh=OHFydmtoOTlsYnFn&utm_source=qr"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/@angelicavaleria8?_t=8nP1Fc1Cg0k&_r=1"><i class="fa-brands fa-tiktok"></i></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="photo-gallery">
+        <div class="grid-container">
+            <div class="grid-item"><img src="/imgenes/principal2.jpg" alt="Photo 1"></div>
+            <div class="grid-item"><img src="/imgenes/esquina.jpg" alt="Photo 2"></div>
+            <div class="grid-item"><img src="/imgenes/verticallarga.jpg" alt="Photo 3"></div>
+            <div class="grid-item"><img src="/imgenes/principal.jpg" alt="Photo 4"></div>
+            <div class="grid-item"><img src="/imgenes/abajo1.jpg" alt="Photo 5"></div>
+            <div class="grid-item"><img src="/imgenes/abajo2.jpg" alt="Photo 6"></div>
+            <div class="grid-item"><img src="/imgenes/abajo3.jpg" alt="Photo 7"></div>
+        </div>
+    </section>
+
+
+
+</body>
+<script>
+    document.querySelectorAll('.navbar ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - document.querySelector('.navbar').offsetHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</html>
